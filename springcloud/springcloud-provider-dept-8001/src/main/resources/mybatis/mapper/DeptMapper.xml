@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.seeyourface.springcloud.mapper.DeptMapper">
+    <select id="qryAll" resultType="cn.seeyourface.springcloud.entity.Dept">
+        select * from dept
+    </select>
+
+    <select id="qryDeptById" resultType="cn.seeyourface.springcloud.entity.Dept" parameterType="Long">
+        select  * from dept where deptno = #{deptno}
+    </select>
+
+    <insert id="addDept" parameterType="cn.seeyourface.springcloud.entity.Dept">
+       insert into dept (dname, dbsource) values (#{dname},DATABASE())
+    </insert>
+
+</mapper>
