@@ -17,6 +17,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <version>1.4.6.RELEASE</version>
+        </dependency>
 <!--        拿到我们自己的实体类，需要配置api-model-->
         <dependency>
             <groupId>cn.seeyourface</groupId>
